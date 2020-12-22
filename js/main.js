@@ -8,6 +8,7 @@ window.onload = function () {
     setTimeout(img, 1500);
     setTimeout(page_nav, 1500);
     setTimeout(about_main, 1500);
+    setTimeout(lavender_main, 1500);
     setTimeout(shop, 1500);
 };
 
@@ -70,6 +71,15 @@ function about_main() {
     t.style.transform = "translate(0)";
 
     var pt = document.querySelector("#about_main p");
+    pt.style.opacity = "1";
+    pt.style.transform = "translate(0)";
+}
+function lavender_main() {
+    var t = document.querySelector("#lavender_main h1");
+    t.style.opacity = "1";
+    t.style.transform = "translate(0)";
+
+    var pt = document.querySelector("#lavender_main p");
     pt.style.opacity = "1";
     pt.style.transform = "translate(0)";
 }
