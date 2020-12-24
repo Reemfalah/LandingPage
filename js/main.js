@@ -1,101 +1,67 @@
-window.onload = function () {
-    setTimeout(logo, 1000);
-    setTimeout(tap, 1000);
-    setTimeout(social, 1000);
-    setTimeout(media, 1000);
-    setTimeout(indi, 1000);
-    setTimeout(content, 1500);
-    setTimeout(img, 1500);
-    setTimeout(page_nav, 1500);
-    setTimeout(about_main, 1500);
-    setTimeout(lavender_main, 1500);
-    setTimeout(shop, 1500);
+// navigation var
+const navigation = document.getElementById("tab");
+
+// sections var
+const sections = document.querySelectorAll("section");
+
+// build nav
+const navBuilder = () => {
+    let navUI = "";
+    // looping over all sections
+    sections.forEach((section) => {
+        const sectionID = section.id;
+        const sectionDataNav = section.dataset.nav;
+
+        navUI += `<li><a class="menu__link" href="#${sectionID}">${sectionDataNav}</a></li>`;
+    });
+    navigation.innerHTML = navUI;
 };
 
-function logo() {
-    var h = document.querySelector("#logo h1");
-    h.style.opacity = "1";
-}
+navBuilder();
 
-function tap() {
-    var l = document.querySelectorAll("#tap li");
-    var i;
-    for (i = 0; i < l.length; i++) {
-        l[i].style.opacity = "1";
-        l[i].style.transform = "translate(0)";
+const offset = (section) => {
+    return Math.floor(section.getBoundingClientRect().top);
+};
+// remove the active class
+const removeActive = (section) => {
+    section.classList.remove("active");
+    section.style.cssText = "background-color: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%)";
+    var selector = `nav a[href="#${section.id}"`;
+    document.querySelector(selector).classList.remove("active");
+};
+// adding the active class
+const addActive = (conditional, section) => {
+    if (conditional) {
+        section.classList.add("active");
+        section.style.cssText = "background-color: #8d6ea3;";
+        var selector = `nav a[href="#${section.id}"`;
+        document.querySelector(selector).classList.add("active");
     }
-}
-function social() {
-    var l = document.querySelectorAll("#social li");
-    var i;
-    for (i = 0; i < l.length; i++) {
-        l[i].style.opacity = "1";
-        l[i].style.transform = "translate(0)";
-    }
-}
+};
 
-function media() {
-    var l = document.querySelectorAll("#media li");
-    var i;
-    for (i = 0; i < l.length; i++) {
-        l[i].style.opacity = "1";
-        l[i].style.transform = "translate(0)";
-    }
-}
+//implementating the actual function
+const sectionActivation = () => {
+    sections.forEach((section) => {
+        const elementOffset = offset(section);
 
-function indi() {
-    var l = document.querySelectorAll("#indi li");
-    var i;
-    for (i = 0; i < l.length; i++) {
-        l[i].style.opacity = "1";
-        l[i].style.transform = "translate(0)";
-    }
-}
+        inviewport = () => elementOffset < 150 && elementOffset >= -150;
 
-function content() {
-    var he = document.querySelector("#content h1");
-    he.style.opacity = "1";
-    he.style.transform = "translate(0)";
+        removeActive(section);
+        addActive(inviewport(), section);
+    });
+};
 
-    var p = document.querySelector("#content p");
-    p.style.opacity = "1";
-    p.style.transform = "translate(0)";
+window.addEventListener("scroll", sectionActivation);
 
-    var b = document.querySelector("#content button");
-    b.style.opacity = "1";
-    b.style.transform = "translate(0)";
-}
-function about_main() {
-    var t = document.querySelector("#about_main h1");
-    t.style.opacity = "1";
-    t.style.transform = "translate(0)";
+const scrolling = () => {
+    const links = document.querySelectorAll(".navigation a");
+    links.forEach((link) => {
+        link.addEventListener("click", () => {
+            for (i = 0; i < sections; i++) {
+                sections[i].addEventListener("click", sectionScroll(link));
+            }
+        });
+    });
+};
 
-    var pt = document.querySelector("#about_main p");
-    pt.style.opacity = "1";
-    pt.style.transform = "translate(0)";
-}
-function lavender_main() {
-    var t = document.querySelector("#lavender_main h1");
-    t.style.opacity = "1";
-    t.style.transform = "translate(0)";
-
-    var pt = document.querySelector("#lavender_main p");
-    pt.style.opacity = "1";
-    pt.style.transform = "translate(0)";
-}
-function img() {
-    var im = document.querySelector("#img");
-    im.style.opacity = "1";
-    im.style.transform = "translate(0)";
-}
-
-function page_nav() {
-    var a = document.querySelector("#page_nav");
-    a.style.opacity = "1";
-    a.style.transform = "translate(0)";
-}
-function shop() {
-    var im = document.querySelector("#shop");
-    im.style.opacity = "1";
-    im.style.transform = "translate(0)";
-}
+scrolling();

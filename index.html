@@ -2,134 +2,95 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width>, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <script src="https://kit.fontawesome.com/59e2805d8e.js" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
+        <link href="css/style.css" rel="stylesheet" />
+        <script defer src="js/main.js"></script>
         <title>Home|Lavender</title>
     </head>
-    <!-- body -->
     <body>
-        <section class="first">
-            <div class="grid-container">
-                <!-- header -->
-                <header class="grid-container_header">
-                    <div id="navigation">
-                        <div id="logo">
-                            <h1>Lavender</h1>
-                        </div>
-                        <div id="tap">
-                            <ul>
-                                <li><a href="#shop"> Shop</a></li>
-                                <li><a href="#about"> about</a></li>
-                                <li><a href="#contact"> contact</a></li>
-                            </ul>
-                        </div>
-                        <div id="social">
-                            <ul>
-                                <li><i class="fa fa-search"></i></li>
-                                <li><i class="fa fa-shopping-cart"></i></li>
-                            </ul>
-                        </div>
+        <header class="header">
+            <nav class="navigation">
+                <ul id="tab"></ul>
+            </nav>
+        </header>
+        <main>
+            <header class="logo">
+                <h2>Lavender</h2>
+            </header>
+            <section id="home" data-nav="HOME" class="active">
+                <div class="grid-container_main">
+                    <div id="content_h2">
+                        <h2>Lavender Most Beautiful Flower</h2>
                     </div>
-                </header>
-
-                <main class="grid-container_main">
                     <div id="content">
-                        <h1>Lavender Most Beautiful Flower</h1>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima vero est a, hic fuga nesciunt, Magni.
                         </p>
                         <button>shop now</button>
                     </div>
-                </main>
-            </div>
-        </section>
-        <!-- first section -->
-        <section id="about">
-            <div class="grid-container2">
-                <main class="grid-container_main">
-                    <div id="about_main">
-                        <h1>About us</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae magnam
-                            aliquid vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus
-                            voluptates quae magnam aliquid vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis!
-                            Laudantium sint natus voluptates quae magnam aliquid vitae ratione.
-                        </p>
-                    </div>
-                </main>
-            </div>
-        </section>
-                <!-- second section -->
-
-        <section id="lavender">
-            <div class="grid-container2">
-                <main class="grid-container_main">
-                    <div id="lavender_main">
-                        <h1>About Lavender</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae magnam
-                            aliquid vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus
-                            voluptates quae magnam aliquid vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis!
-                            Laudantium sint natus voluptates quae magnam aliquid vitae ratione.
-                        </p>
-                    </div>
-                </main>
-            </div>
-        </section>
-                <!-- third section -->
-
-        <section id="shop">
-            <div id="shop_main">
-                <div id="shop_now"></div>
-                <div class="grid-container3">
-                    <main class="grid-container_main">
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a target="_blank" href="#">
-                                    <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
-                                </a>
-                                <div class="desc">Lavender</div>
-                            </div>
-                        </div>
-
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a target="_blank" href="#">
-                                    <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
-                                </a>
-                                <div class="desc">Lavender</div>
-                            </div>
-                        </div>
-
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a target="_blank" href="#">
-                                    <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
-                                </a>
-                                <div class="desc">Lavender</div>
-                            </div>
-                        </div>
-
-                        <div class="responsive">
-                            <div class="gallery">
-                                <a target="_blank" href="#">
-                                    <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
-                                </a>
-                                <div class="desc">Lavender</div>
-                            </div>
-                        </div>
-                    </main>
                 </div>
-            </div>
-        </section>
-                <!-- fourth section -->
+            </section>
+            <section id="About" data-nav="ABOUT">
+                <div class="grid-container_main">
+                    <h2>About us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae magnam aliquid
+                        vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae
+                        magnam aliquid vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus
+                        voluptates quae magnam aliquid vitae ratione.
+                    </p>
+                </div>
+            </section>
+            <section id="shop" data-nav="SHOP">
+                <div class="grid-container_main">
+                    <h2>shop now</h2>
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
+                            </a>
+                            <div class="desc">Lavender</div>
+                        </div>
+                    </div>
 
-        <section id="contact">
-            <div class="grid-container4">
-                <!-- footer -->
-                <footer class="grid-container_footer">
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
+                            </a>
+                            <div class="desc">Lavender</div>
+                        </div>
+                    </div>
+
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
+                            </a>
+                            <div class="desc">Lavender</div>
+                        </div>
+                    </div>
+
+                    <div class="responsive">
+                        <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img src="images/lavender2.webp" alt="Lavender" width="600" height="400" />
+                            </a>
+                            <div class="desc">Lavender</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" data-nav="CONTACT">
+                <div class="grid_main">
+                    <h2>contact</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae magnam aliquid
+                        vitae ratione. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis ab sapiente expedita harum, culpa obcaecati doloribus doloremque, asperiores voluptatibus non nobis! Laudantium sint natus voluptates quae
+                        magnam aliquid vitae ratione.
+                    </p>
                     <div id="media">
                         <ul>
                             <li>
@@ -146,9 +107,11 @@
                             </li>
                         </ul>
                     </div>
-                    <p>© 2020 Lavender</p>
-                </footer>
-            </div>
-        </section>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>© 2020 Lavender</p>
+        </footer>
     </body>
 </html>
